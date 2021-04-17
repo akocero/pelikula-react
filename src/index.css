@@ -633,5 +633,5 @@ input[type=password]:focus {
 
 .auth .card {
   margin-top: -3%;
-  max-width: 30%;
+  width: 40rem;
 }

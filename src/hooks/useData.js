@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-// import axios from '../url/axios';
 import axios from 'axios';
 
 const useData = (url, random = false) => {

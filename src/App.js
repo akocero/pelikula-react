@@ -22,6 +22,7 @@ function App() {
           <MovieContextProvider>
             <Switch>
               <Route exact path='/' component={Home} />
+
               <Route path='/search' component={BrowseMovies} />
               <Route path="/login" component={Login} />
               <Route path="/signup" component={Signup} />
@@ -29,7 +30,6 @@ function App() {
               <Route path='/:post_id' component={MovieDetails} />
 
             </Switch>
-
           </MovieContextProvider>
         </AuthContextProvider>
       </div >

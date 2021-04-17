@@ -26,7 +26,6 @@ const Discover = ({ title, fetchURL, poster }) => {
                 )}
             </div>
 
-
         </div >
     );
 }

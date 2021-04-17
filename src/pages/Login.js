@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react'
-import { useAuth } from '../../context/AuthContext'
+import { useAuth } from '../context/AuthContext'
 import { useHistory, Link } from 'react-router-dom';
+
 const Login = () => {
 
     const { login } = useAuth();

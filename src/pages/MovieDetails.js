@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import Header from '../layout/Header';
+import Header from '../components/layout/Header';
 
 const MovieDetails = (props) => {
     const [imdbData, setImdbData] = useState([]);
     const [id] = useState(props.match.params.post_id);
     const imagePath = 'https://image.tmdb.org/t/p/original';
+
     useEffect(() => {
         const fetchItems = async () => {
             const result = await axios(

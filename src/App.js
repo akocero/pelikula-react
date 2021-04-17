@@ -4,14 +4,14 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import MovieContextProvider from './context/MovieContext';
 import AuthContextProvider from './context/AuthContext';
 // pages
-import MovieDetails from './components/pages/MovieDetails';
-import BrowseMovies from './components/pages/BrowseMovies';
-import Home from './components/pages/Home';
-import Login from './components/pages/Login';
-import Signup from './components/pages/Signup';
+import MovieDetails from './pages/MovieDetails';
+import BrowseMovies from './pages/BrowseMovies';
+import Home from './pages/Home';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
 // privatePages
-import Dashboard from './components/privatePages/Dashboard';
-import PrivateRoute from './components/privatePages/PrivateRoute';
+import Dashboard from './privatePages/Dashboard';
+import PrivateRoute from './privatePages/PrivateRoute';
 
 
 function App() {

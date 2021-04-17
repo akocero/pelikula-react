@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import Discover from '../Discover';
-import request from '../../url/request';
-import axios from '../../url/axios';
-import Header from '../layout/Header';
-import Heading from '../Heading';
+import Discover from '../components/Discover';
+import request from '../url/request';
+import axios from '../url/axios';
+import Header from '../components/layout/Header';
+import Heading from '../components/Heading';
 
 const HomePage = () => {
     const [movie, setMovie] = useState([]);

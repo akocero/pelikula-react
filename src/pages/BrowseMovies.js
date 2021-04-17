@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from '../layout/Header';
-import MovieContainer from '../MovieContainer';
-import SearchMovie from '../SearchMovie';
+import Header from '../components/layout/Header';
+import MovieContainer from '../components/MovieContainer';
+import SearchMovie from '../components/SearchMovie';
 const BrowseMovies = () => {
     return (
         <>

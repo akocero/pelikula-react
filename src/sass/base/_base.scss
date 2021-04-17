@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include respond(phone) {
+      font-size: 55%; 
+  }
+}
+body {
+  margin: 0;
+  font-family: 'Open sans';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  color: $light;
+  background-color: $dark;
+}
+
+// img {
+//     width: 100%;
+// }
+
+ul {
+  list-style-type: none;
+}
+

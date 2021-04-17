@@ -1,0 +1,40 @@
+.movie-details {
+    padding: 6rem 1rem 2rem 1rem;
+    width: 100%;
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: minmax(100px, auto);
+    grid-gap: 2rem;
+    grid-template-areas: 
+        "title title title title"
+        "img img review review"
+        "plot plot plot plot"
+    ;
+
+    @include respond(phone) {
+        // grid-template-columns: 1fr;
+    }
+    
+    &-img {
+        grid-area: img;
+        object-fit: contain;
+        margin: 0 auto;
+        img {
+            width: 100%;
+        }
+        
+    }
+
+    &-title {
+        grid-area: title;
+    }
+
+    &-content {
+        grid-area: content;
+    }
+
+    &-plot {
+        grid-area: plot;
+    }
+}

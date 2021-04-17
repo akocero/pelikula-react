@@ -1,0 +1,26 @@
+.row-movie-cards {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 2.5rem;
+
+    @include respond(tab-land) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include respond(tab-port) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include respond(phone) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
+
+@media only screen and (max-width: 600px) {
+  .row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+

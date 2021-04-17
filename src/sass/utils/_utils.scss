@@ -1,0 +1,119 @@
+.container {
+    max-width: $max-width;
+    margin: 0 auto;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    outline: none;
+    border: none;
+    background-color: $light-red;
+    border-radius: 0.5rem;
+    color: $light;
+    font-size: 1.5rem;
+    cursor: pointer;
+    letter-spacing: 1px;
+    &-sm {
+        margin-top: 2rem;
+        padding: 1rem 2rem;
+        outline: none;
+        border: none;
+        color: white;
+        font-size: 1.4rem;
+        cursor: pointer;
+        letter-spacing: 2px;    
+        border-radius: 3rem;
+    }
+
+    &-blue {
+        background-color: $blue;
+    }
+    
+}
+
+.d-flex {
+    display: flex;
+    
+}
+
+.justify-content-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.shadow-sm {
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+
+.w-300 {
+    max-width: 30rem;
+}
+
+.w-400 {
+    max-width: 40rem;
+}
+
+.w-500 {
+    max-width: 50rem;
+}
+
+.alert {
+    padding: 2rem;
+    margin: 1rem auto;
+    border-radius: 0.6rem;
+    &-danger {
+        // border:2px solid rgb(212, 48, 64);
+        opacity: 0.9;
+        background-color: rgb(223, 63, 77);
+        color: $light;
+    }
+}
+
+.h-100vh {
+    height: 100vh;
+}
+
+
+$spaceAmounts: (1,2,3,4,5);
+
+@each $space in $spaceAmounts {
+    .m-#{$space}{
+        margin: #{$space}rem;
+    }
+
+    .my-#{$space}{
+        margin: #{$space}rem 0;
+    }
+
+    .mx-#{$space}{
+        margin: 0 #{$space}rem;
+    }
+    .mt-#{$space}{
+        margin-top: #{$space}rem;
+    }
+    .mb-#{$space}{
+        margin-bottom: #{$space}rem;
+    }
+
+    .p-#{$space}{
+        padding: #{$space}rem;
+    }
+
+    .py-#{$space}{
+        padding: #{$space}rem 0;
+    }
+
+    .px-#{$space}{
+        padding: 0 #{$space}rem;
+    }
+    .pt-#{$space}{
+        padding-top: #{$space}rem;
+    }
+    .pb-#{$space}{
+        padding-bottom: #{$space}rem;
+    }
+}
+
+.bg-dark {
+    background-color: darken($dark, 6%);
+}

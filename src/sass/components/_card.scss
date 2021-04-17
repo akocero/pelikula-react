@@ -1,0 +1,42 @@
+.card {
+  margin: 0 auto; 
+  border-radius: 0.5rem;
+  overflow: hidden;
+  padding: 1rem 1.6rem;
+  
+  &-img {
+    transition: all .6s ease-in-out;
+    text-align: center;
+
+    img {
+      object-fit: contain;
+      // width: 100%;
+      max-width: 17rem;
+      max-height: 25rem;
+    }
+
+    &:hover {
+      transform: scale(1.04);
+    }
+    
+  }
+  
+  &-content {
+    padding: 1rem;
+    
+    &--title {
+      color: white;
+
+      &:hover {
+        color: rgb(241, 185, 0);
+        text-decoration: none;
+      }
+
+    }
+
+    &--text {
+      color: white;
+      font-weight: bold;
+    }
+  }
+}

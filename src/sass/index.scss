@@ -1,0 +1,15 @@
+@import 'base/variables';
+@import 'functions/mixin';
+@import 'base/base';
+@import 'base/typography';
+
+@import 'components/card';
+@import 'components/forms'; 
+
+@import 'layout/navbar';
+@import 'layout/grid';
+
+@import 'utils/utils';
+
+@import 'pages/home';
+@import 'pages/movie_details';

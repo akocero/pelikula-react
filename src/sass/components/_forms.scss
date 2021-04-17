@@ -1,0 +1,27 @@
+input[type=text],
+input[type=email],
+input[type=password] {
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    background-color: darken($dark, 1%);
+    color: $light;
+    border: none;
+    border-bottom: 2px solid transparent;
+    margin: 1rem 0;
+
+    &:focus {
+        outline-width: 0;
+        border-bottom: 2px solid $blue;
+    }
+}
+
+.form-text {
+    font-size: 1.4rem;
+    color: rgb(158, 158, 158);
+}
+
+.form-movie-search {
+    max-width: 600px;
+    margin: 0 auto;
+}

@@ -1,0 +1,42 @@
+a {
+    text-decoration: none;
+    color: $light;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+.text {
+    font-weight: 400;
+    &-xl {
+    font-size: 8rem;
+    letter-spacing: 4px;
+    }
+
+    &-l {
+        font-size: 6rem;
+    }
+
+    &-md {
+        font-size: 4rem;
+    }
+
+    &-sm {
+        font-size: 2rem;
+    }
+
+    &-p {
+        font-size: 1.6rem;
+        letter-spacing: 1px;
+        line-height: 2.8rem;
+    }
+}
+
+a {
+    color: $blue;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

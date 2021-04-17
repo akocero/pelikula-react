@@ -8,21 +8,25 @@ const useData = (url, random = false) => {
     // const [error, setError] = useState(null);
 
     useEffect(() => {
+        const abortCont = new AbortController();
 
-        const getData = async () => {
-            const response = await axios(url);
 
-            if (random) {
-                setData(response.data.results[Math.floor(Math.random() * response.data.results.length - 1)]);
-            } else {
-                setData(response.data.results);
-            }
+        axios(url, { signal: abortCont.signal })
+            .then(response => {
+                if (random) {
+                    setData(response.data.results[Math.floor(Math.random() * response.data.results.length - 1)]);
+                } else {
+                    setData(response.data.results);
+                }
+                setIsLoading(false);
+            }).catch(err => {
+                if (err.name === 'AbortError') {
+                    console.log('Fetch Aborted');
+                }
+            });
 
-            setIsLoading(false);
-            return response;
-        }
+        return () => abortCont.abort();
 
-        getData();
     }, [url, random]);
 
 

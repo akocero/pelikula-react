@@ -17,7 +17,7 @@ import PrivateRoute from './components/privatePages/PrivateRoute';
 function App() {
   return (
     <Router>
-      <div className="App bg-dark">
+      <div className="App">
         <AuthContextProvider>
           <MovieContextProvider>
             <Switch>

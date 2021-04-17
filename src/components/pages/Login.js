@@ -28,32 +28,37 @@ const Login = () => {
     }
 
     return (
-        <div className="container">
-            <div>
-                <div className="card shadow-sm w-400">
-                    <h1 className="mb-2 text text-md">Log In</h1>
+        <div className="auth">
+            <div className="card">
+                <h1 className="my-3">Sign In</h1>
 
-                    {error && <div className="alert alert-danger error">{error}</div>}
+                {error && <div className="alert alert-danger">{error}</div>}
 
-                    <form action="" onSubmit={submitHandler}>
+                <form action="" onSubmit={submitHandler}>
 
-                        <label htmlFor="email" >Email</label>
+                    <div className="input-group">
+                        <label htmlFor="email" className="form-text">Email</label>
                         <input type="email" ref={emailRef} placeholder="Email" required />
+                    </div>
 
-                        <label htmlFor="password">Password</label>
+                    <div className="input-group">
+                        <label htmlFor="password" className="form-text">Password</label>
                         <input type="password" ref={passwordRef} placeholder="Password" required />
+                    </div>
 
-                        <input className="btn btn-blue mt-1" type="submit" disabled={loading} value="Sign in" />
+                    <div className="input-group text-center">
+                        <input className="btn btn-blue f-right" type="submit" disabled={loading} value="Sign in" />
+                    </div>
 
-                    </form>
-                </div>
+                </form>
 
-                <div className="d-flex justify-content-center my-2">
+                <div className="text-center mt-3">
                     Need an account ? &nbsp;
-                    <Link to="/signup">Sign up</Link>
+                <Link to="/signup">Sign up</Link>
                 </div>
-
             </div>
+
+
         </div>
     )
 }

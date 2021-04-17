@@ -30,30 +30,37 @@ const Signup = () => {
     }
 
     return (
-        <div className="container">
-            <div>
-                <div className="card shadow-sm w-400">
-                    <h1 className="mb-2 text text-md">Sign Up</h1>
-                    {error && <div className="alert alert-danger error">{error}</div>}
-                    <form action="" onSubmit={submitHandler}>
+        <div className="auth">
+            <div className="card">
+                <h1 className="mb-3">Sign Up</h1>
+                {error && <div className="alert alert-danger error">{error}</div>}
 
+                <form action="" onSubmit={submitHandler}>
+                    <div className="input-group">
                         <label htmlFor="email" className="form-text">Email</label>
                         <input type="email" placeholder="Email" ref={emailRef} required />
+                    </div>
 
+                    <div className="input-group">
                         <label htmlFor="password" className="form-text">Password</label>
                         <input type="password" placeholder="Password" ref={passwordRef} required />
+                    </div>
 
+                    <div className="input-group">
                         <label htmlFor="password" className="form-text">Confirm Password</label>
                         <input type="password" placeholder="Comfirm Password" ref={passwordConfirmRef} required />
+                    </div>
 
+                    <div className="input-group">
                         <input className="btn btn-blue" type="submit" disabled={loading} value="Sign up" />
+                    </div>
 
-                    </form>
-                </div>
+                </form>
                 <div className="d-flex justify-content-center my-2">
                     Already have account ? &nbsp;<Link to="/login">Log in</Link>
                 </div>
             </div>
+
         </div>
     )
 }

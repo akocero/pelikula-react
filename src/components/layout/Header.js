@@ -15,7 +15,9 @@ const Header = () => {
 
     return (
         <div className={`navbar ${hasBG && "has-bg"}`}>
-            <div className="brand"><Link to="/" className="text-logo">PELIKULA</Link></div>
+            <div className="brand">
+                <Link to="/" className="text-logo">PELIKULA</Link>
+            </div>
             <nav className="nav">
                 <ul className="nav-links">
                     <li className="nav-item"><NavLink to="/search" className="nav-link">Browse Movies</NavLink></li>

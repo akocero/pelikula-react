@@ -4,6 +4,7 @@
 }
 
 .btn {
+    display: inline-block;
     padding: 1rem 2rem;
     outline: none;
     border: none;
@@ -13,6 +14,7 @@
     font-size: 1.5rem;
     cursor: pointer;
     letter-spacing: 1px;
+    
     &-sm {
         margin-top: 2rem;
         padding: 1rem 2rem;
@@ -116,4 +118,16 @@ $spaceAmounts: (1,2,3,4,5);
 
 .bg-dark {
     background-color: darken($dark, 6%);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-end {
+    justify-content: flex-end;
 }

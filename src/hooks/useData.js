@@ -8,9 +8,10 @@ const useData = (url, random = false) => {
     // const [error, setError] = useState(null);
 
     useEffect(() => {
+        const abortCont = new AbortController();
 
         const getData = async () => {
-            const response = await axios(url);
+            const response = await axios(url, { signal: abortCont.signal });
 
             if (random) {
                 setData(response.data.results[Math.floor(Math.random() * response.data.results.length - 1)]);
@@ -23,6 +24,10 @@ const useData = (url, random = false) => {
         }
 
         getData();
+        return () => {
+            abortCont.abort();
+            console.log('fetch aborted');
+        };
     }, [url, random]);
 
 

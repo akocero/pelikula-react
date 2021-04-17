@@ -6,6 +6,8 @@ const Heading = ({ movie }) => {
     const truncate = (str, n) => {
         return str?.length > n ? str.substr(0, n - 1) + "..." : str;
     }
+
+    const backdrop_path = movie.backdrop_path && imagePath + movie?.backdrop_path;
     return (
         <header className="header"
             style={{
@@ -14,7 +16,7 @@ const Heading = ({ movie }) => {
                         to right, 
                         rgba(1, 1, 1, 0.80),
                         transparent), 
-                        url(${imagePath + movie?.backdrop_path})`,
+                        url(${backdrop_path})`,
                 backgroundPosition: "center center",
             }}
         >

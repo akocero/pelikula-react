@@ -11,11 +11,14 @@ const MovieContextProvider = (props) => {
     const [query, setQuery] = useState('avengers');
 
     useEffect(() => {
+        const abortCont = new AbortController();
+
         const fetchItems = async () => {
 
             setIsLoading(true)
             const result = await axios(
-                `https://api.themoviedb.org/3/search/movie?api_key=7d7a6c7d574c704591e07f29b54b6b0b&query=${query}&page=${pageNumber}`
+                `https://api.themoviedb.org/3/search/movie?api_key=7d7a6c7d574c704591e07f29b54b6b0b&query=${query}&page=${pageNumber}`,
+                { signal: abortCont.signal }
             );
 
             if (!result.data.results) {
@@ -31,6 +34,10 @@ const MovieContextProvider = (props) => {
         }
 
         fetchItems();
+        return () => {
+            abortCont.abort();
+            console.log('fetch aborted');
+        };
 
     }, [query, pageNumber]);
 

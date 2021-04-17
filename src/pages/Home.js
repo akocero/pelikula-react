@@ -1,27 +1,17 @@
-import React, { useState, useEffect } from 'react';
 import Discover from '../components/Discover';
 import request from '../url/request';
-import axios from '../url/axios';
 import Header from '../components/layout/Header';
 import Heading from '../components/Heading';
+import useData from '../hooks/useData';
 
 const HomePage = () => {
-    const [movie, setMovie] = useState([]);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            const headerData = await axios.get(request.topAction);
-            setMovie(headerData.data.results[Math.floor(Math.random() * headerData.data.results.length - 1)]);
-            return headerData;
-        }
-
-        fetchData();
-
-    }, []);
+    const { data: movie, isLoading } = useData(request.topAction, true);
 
     return (
         <div className="home_page">
             <Header />
+            {isLoading && <div> Loading... </div>}
             {movie && <Heading movie={movie} />}
             <Discover title="Trending Now" fetchURL={request.trending} poster={true} />
             <Discover title="Top Action" fetchURL={request.topAction} poster={false} />

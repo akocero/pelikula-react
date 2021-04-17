@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 //contexts
-import MovieContextProvider from './context/MovieContext';
-import AuthContextProvider from './context/AuthContext';
+import MovieContextProvider from './contexts/MovieContext';
+import AuthContextProvider from './contexts/AuthContext';
 // pages
 import MovieDetails from './pages/MovieDetails';
 import BrowseMovies from './pages/BrowseMovies';

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { MovieContext } from '../context/MovieContext';
+import { MovieContext } from '../contexts/MovieContext';
 import MovieCard from './MovieCard';
 
 const MovieContainer = () => {

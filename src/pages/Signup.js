@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import { useAuth } from '../context/AuthContext'
+import { useAuth } from '../contexts/AuthContext'
 import { useHistory, Link } from 'react-router-dom';
 const Signup = () => {
 

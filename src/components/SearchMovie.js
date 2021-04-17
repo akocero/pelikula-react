@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { MovieContext } from '../context/MovieContext';
+import { MovieContext } from '../contexts/MovieContext';
 const SearchMovie = () => {
     const { setQuery, setPageNumber } = useContext(MovieContext);
 

@@ -2,7 +2,7 @@ input[type=text],
 input[type=email],
 input[type=password] {
     padding: 1rem;
-    display: block;
+    display: inline-block;
     width: 100%;
     background-color: darken($dark, 1%);
     color: $light;
@@ -24,4 +24,9 @@ input[type=password] {
 .form-movie-search {
     max-width: 600px;
     margin: 0 auto;
+}
+
+.input-group {
+    width: 100%;
+    margin-bottom: 1rem;
 }

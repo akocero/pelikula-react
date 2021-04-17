@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useAuth } from '../../context/AuthContext'
+import { useAuth } from '../contexts/AuthContext'
 import { useHistory } from 'react-router-dom';
 const Dashboard = () => {
 

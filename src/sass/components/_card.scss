@@ -1,53 +1,117 @@
+// .card {
+//   min-width: 200px;
+//   border-radius: 0.5rem;
+//   overflow: hidden;
+//   padding: 1rem 1.6rem;
+  
+//   &-img {
+//     transition: all .6s ease-in-out;
+//     text-align: center;
+
+//     img {
+//       object-fit: contain;
+//       // width: 100%;
+//       max-width: 17rem;
+//       max-height: 25rem;
+//     }
+
+//     &:hover {
+//       transform: scale(1.04);
+//     }
+    
+//   }
+  
+//   &-content {
+//     padding: 1rem;
+    
+//     &--title {
+//       color: white;
+
+//       &:hover {
+//         color: rgb(241, 185, 0);
+//         text-decoration: none;
+//       }
+
+//     }
+
+//     &--text {
+//       color: white;
+//       font-weight: bold;
+//     }
+//   }
+// }
 .cast {
-  // width: 100%;
-  .cast-list {
-    display: flex;
+  position: relative;
+  margin: 0 3rem;
+  margin-top: -7rem;
+  z-index: 100;
+  padding: 2rem;
+  // padding: 1rem;
+  
+}
+.cast-list {
+  padding: 2rem 0;
+  display: flex;
+  overflow: hidden;
+  overflow-x: scroll;
+  & > * {
+    margin-right: 2rem;
+  }
+
+  .card {
+    min-width: 160px;
+    background-color: rgba(32, 32, 32, 0.603);
+    border-radius: 3px;
     overflow: hidden;
-    overflow-x: auto;
+
+    &__image {
+      object-fit: cover;
+      width: 100%;
+      height: 200px;
+      
+      
+    }
+
+
+    &__content {
+      padding: 1rem;
+    }
+  }
+
+  &::-webkit-scrollbar {
+      height: .8rem;
+      
+  }
+
+      /* Track */
+  &::-webkit-scrollbar-track {
+      background:transparent;
+      
+  }
+
+      /* Handle */
+  &::-webkit-scrollbar-thumb {
+      background: rgba(#555, 0.1);
+      border-radius: 6px;
+  }
+
+      /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+      background: rgba($light-red,0.8);
   }
 }
 
-
-
 .card {
   width: 100%;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  padding: 1rem 1.6rem;
-  
-  &-img {
-    transition: all .6s ease-in-out;
-    text-align: center;
+  // min-width: 200px;
+  // max-width: 200px;
+
+  &__img-container {
+    width: 100%;
 
     img {
-      object-fit: contain;
-      // width: 100%;
-      max-width: 17rem;
-      max-height: 25rem;
-    }
-
-    &:hover {
-      transform: scale(1.04);
-    }
-    
-  }
-  
-  &-content {
-    padding: 1rem;
-    
-    &--title {
-      color: white;
-
-      &:hover {
-        color: rgb(241, 185, 0);
-        text-decoration: none;
-      }
-
-    }
-
-    &--text {
-      color: white;
-      font-weight: bold;
+      width: 100%;
     }
   }
+
 }

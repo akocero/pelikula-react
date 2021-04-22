@@ -9,7 +9,7 @@ const Heading = ({ movie }) => {
 
     const backdrop_path = movie.backdrop_path && imagePath + movie?.backdrop_path;
     return (
-        <header className="header"
+        <div className="header"
             style={{
                 backgroundSize: "cover",
                 backgroundImage: `linear-gradient(
@@ -22,12 +22,12 @@ const Heading = ({ movie }) => {
         >
             <div className="row">
                 <div className="col header-text-content">
-                    <div className="text text-sm movie-year">
+                    <div className="text text-sm movie-year mb-2">
                         {
                             movie.release_date && movie.release_date.slice(0, 4)
                         }
                     </div>
-                    <div className="text text-l movie-title">
+                    <div className="text text-l movie-title mb-2">
                         {truncate(movie?.title || movie?.original_title, 30)}
                     </div>
                     <div className="text text-p movie-plot mb-4">
@@ -40,7 +40,7 @@ const Heading = ({ movie }) => {
 
             </div>
             <div className="fade-effect"></div>
-        </header>
+        </div>
     );
 }
 

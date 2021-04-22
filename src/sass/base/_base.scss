@@ -1,7 +1,7 @@
-* {
+*, *::after, *::before  {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 html {
@@ -19,7 +19,7 @@ body {
   font-family: Ubuntu;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  box-sizing: border-box;
+  box-sizing: inherit;
   color: $light;
   background-color: $dark;
 }

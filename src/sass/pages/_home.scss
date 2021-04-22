@@ -19,21 +19,34 @@
 
         .header-text-content {
             z-index: 100;
-            padding-left: 3rem;
+            padding-left: 5rem;
         }
     }
 
-    .fade-effect {
-        margin-top: -5rem;
-        height: 10rem;
+    // .fade-effect {
+    //     margin-top: -5rem;
+    //     height: 10rem;
+    //     background-image: linear-gradient(
+    //         180deg,
+    //         transparent,
+    //         rgba(1,1,1, 0.98),
+    //         darken($dark, 12%)
+    //     );
+    // }
+}
+
+.fade-effect {
+    position: relative;
+        margin-top: -7rem;
+        height: 12rem;
         background-image: linear-gradient(
             180deg,
             transparent,
-            rgba(1,1,1, 0.98),
+            rgba(1, 1, 1, 0.945),
             darken($dark, 12%)
         );
+        z-index: 100;
     }
-}
 .discover-row {
     margin: 1rem 3rem;
 

@@ -1,40 +1,70 @@
 .movie-details {
-    padding: 6rem 1rem 2rem 1rem;
-    width: 100%;
-    display: grid;
-
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: minmax(100px, auto);
-    grid-gap: 2rem;
-    grid-template-areas: 
-        "title title title title"
-        "img img review review"
-        "plot plot plot plot"
-    ;
-
-    @include respond(phone) {
-        // grid-template-columns: 1fr;
-    }
+    // padding-top: 5rem;
     
-    &-img {
-        grid-area: img;
-        object-fit: contain;
-        margin: 0 auto;
-        img {
+    background-color: black;
+    .row {
+        display: grid;
+        grid-gap: 1rem; 
+        grid-template-columns: repeat(2,  1fr);
+        z-index: 1;
+    }
+
+    &__overview {
+        text-align: justify;
+    }
+
+    .movie-details__header {
+        padding: 0 5rem;
+        padding-top: 7rem;
+        grid-template-columns: 1.5fr 4fr;
+        position: relative;
+
+
+        &::before {
+            content: ""; // ::before and ::after both require content
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
+            height: 100%;
+            background-image: linear-gradient(120deg, #000000, #1a1a1a);
+            ;
+            opacity: .85;
+            z-index: 1;
         }
-        
+
+        & > * {
+            z-index: 100;
+        }
     }
 
-    &-title {
-        grid-area: title;
+    &__poster {
+        height: 100%;
+        width: 100%;
+        // display: flex;
+        // justify-content: center;
+        // align-items: flex-start;
+        img {
+            border-radius: 7px;
+            // border: 2px solid rgba(36, 36, 36, 0.103);
+            margin-top: 4rem;
+            width: 90%;
+            box-shadow: 0px 5px 30px 10px rgba(231, 231, 231, 0.082);
+            opacity: 0.75;
+            // margin: 0 auto;
+        }
     }
 
-    &-content {
-        grid-area: content;
+    &__rating {
+        display: flex;
+        align-items: center;
+        img {
+            width: 42px;
+        }
     }
 
-    &-plot {
-        grid-area: plot;
+    &__header {
+        height: calc(100vh);
+        padding-top: 6rem;
     }
 }

@@ -49,7 +49,7 @@ const MovieDetails = (props) => {
                             <h2 className="movie-details__imdb-rating pl-2">{omdbData.imdbRating}<span className="star  pl-1">&#9733;</span></h2>
                         </div>
 
-                        <h3 className="mt-5 mb-1 ">Overview</h3>
+                        <h3 className="mt-5 mb-1 ">Synopsis</h3>
 
                         <p className="movie-details__overview">{data.overview}</p>
 

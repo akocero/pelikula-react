@@ -637,9 +637,11 @@ input[type=password]:focus {
 }
 
 .discover-row .discover_row--title {
+  position: relative;
   font-size: 2rem;
   font-weight: 400;
   letter-spacing: 1px;
+  z-index: 100;
 }
 
 .discover-row .discover-posters {

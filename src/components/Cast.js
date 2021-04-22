@@ -4,7 +4,7 @@ const Cast = () => {
     return (
         <div className="cast">
             <h2 className="cast__title">
-                Cast
+                Top Billed Cast
             </h2>
             <div className="cast-list">
 

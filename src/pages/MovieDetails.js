@@ -17,9 +17,9 @@ const MovieDetails = (props) => {
     return (
         <>
             <Header />
-            { isLoading  && <Loading /> }
-            { data  && <div className="movie-details" >
-                
+            { isLoading && <Loading />}
+            { data && <div className="movie-details" >
+
                 <div className="row movie-details__header" style={{
                     backgroundSize: "cover",
                     backgroundImage: `url(${backdrop_path})`,
@@ -28,19 +28,19 @@ const MovieDetails = (props) => {
                 }}>
                     <div className="col">
                         <div className="movie-details__poster">
-                            <img src={request.imagePath + data?.poster_path} alt=""/>
+                            <img src={request.imagePath + data?.poster_path} alt="" />
                         </div>
                     </div>
                     <div className="col">
-                        <h1 className="movie-details__title pt-5">{ data.original_title } ({data.release_date?.substring(0,4)})</h1>
+                        <h1 className="movie-details__title pt-5">{data.original_title} ({data.release_date?.substring(0, 4)})</h1>
 
                         <p className="movie-details__sub-title mb-2">
                             <span className="certification">R</span> &nbsp;|&nbsp;&nbsp;
                             <span className="release">{data.release_date}</span> &nbsp;|&nbsp;&nbsp;
                             <span className="genres">{
-                            data.genres.map((genre, i, arr) => 
-                                arr.length - 1 === i ? genre.name : genre.name + ',   '
-                            )}</span> &nbsp;|&nbsp;
+                                data.genres.map((genre, i, arr) =>
+                                    arr.length - 1 === i ? genre.name : genre.name + ',   '
+                                )}</span> &nbsp;|&nbsp;
                             <span className="runtime">{data.runtime} mins</span>
                         </p>
 
@@ -48,8 +48,8 @@ const MovieDetails = (props) => {
                             <img src="./imgs/imdb_logo.svg" alt="" />
                             <h2 className="movie-details__imdb-rating pl-2">{omdbData.imdbRating}<span className="star  pl-1">&#9733;</span></h2>
                         </div>
-                        
-                        <h3 className="mt-5 mb-1 ">Overview</h3>
+
+                        <h3 className="mt-5 mb-1 ">Synopsis</h3>
 
                         <p className="movie-details__overview">{data.overview}</p>
 
@@ -62,17 +62,19 @@ const MovieDetails = (props) => {
                                 <h3 >{data.status}</h3>
                                 <label htmlFor="">Status</label>
                             </div>
-                            
+
                         </div>
                     </div>
-                    
+
                 </div>
 
                 <div className="fade-effect"></div>
-                
 
 
-                        <Cast />
+
+                <Cast />
+
+
 
             </div>}
         </>

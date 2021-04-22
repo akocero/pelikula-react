@@ -42,7 +42,7 @@
         background-image: linear-gradient(
             180deg,
             transparent,
-            rgba(1, 1, 1, 0.945),
+            rgba(0, 0, 0, 1),
             darken($dark, 12%)
         );
         z-index: 100;
@@ -51,9 +51,11 @@
     margin: 1rem 3rem;
 
     .discover_row--title {
+        position: relative;
         font-size: 2rem;
         font-weight: 400;
         letter-spacing: 1px;
+        z-index: 100;
     }
 
     .discover-posters {

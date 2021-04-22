@@ -1,3 +1,14 @@
+.cast {
+  // width: 100%;
+  .cast-list {
+    display: flex;
+    overflow: hidden;
+    overflow-x: auto;
+  }
+}
+
+
+
 .card {
   width: 100%;
   border-radius: 0.5rem;

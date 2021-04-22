@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const useData = (url, random = false, single = false) => {
+const useOMDB = (url) => {
 
-    const [data, setData] = useState(null);
+    const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     // const [error, setError] = useState(null);
 
@@ -12,34 +12,24 @@ const useData = (url, random = false, single = false) => {
 
         axios(url, { signal: abortCont.signal })
             .then(response => {
-                console.log(response.data);
 
-                if(random){
-                   setData(response.data.results[Math.floor(Math.random() * response.data.results.length - 1)]); 
-                }
-
-                if(single) {
-                    setData(response.data);
-                }
-
-                if(!single && !random){
-                    setData(response.data.results);
-                }
-
+                setData(response.data);
                 setIsLoading(false);
+
             }).catch(err => {
                 if (err.name === 'AbortError') {
                     console.log('Fetch Aborted');
+                }else{
+                    console.log(err.message);
                 }
             });
 
-
         return () => abortCont.abort();
 
-    }, [url, random, single]);
+    }, [url]);
 
 
     return { data, isLoading };
 }
 
-export default useData;
+export default useOMDB;

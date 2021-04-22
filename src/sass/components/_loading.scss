@@ -1,0 +1,19 @@
+.loading-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    z-index: 1000;
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+
+    &.loading {
+        // top: -100%;
+        background-color: red;
+    }
+}

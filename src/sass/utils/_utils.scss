@@ -114,6 +114,14 @@ $spaceAmounts: (1,2,3,4,5);
     .pb-#{$space}{
         padding-bottom: #{$space}rem;
     }
+
+    .pl-#{$space}{
+        padding-left: #{$space}rem;
+    }
+
+    .pr-#{$space}{
+        padding-right: #{$space}rem;
+    }
 }
 
 .bg-dark {
@@ -130,4 +138,8 @@ $spaceAmounts: (1,2,3,4,5);
 
 .justify-end {
     justify-content: flex-end;
+}
+
+.star {
+    color: #D2B733;
 }

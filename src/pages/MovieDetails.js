@@ -5,6 +5,7 @@ import useData from '../hooks/useData';
 import request from '../url/request';
 import Loading from '../components/Loading';
 import Cast from '../components/Cast';
+import RadialProgressBar from '../components/RadialProgressBar';
 
 const MovieDetails = (props) => {
     const [id] = useState(props.match.params.post_id);
@@ -12,7 +13,7 @@ const MovieDetails = (props) => {
 
     const { data: omdbData, isLoading: isOmdbLoading } = useOMDB(`http://www.omdbapi.com/?i=${data?.imdb_id}&plot=full&apikey=2ff9984a`);
 
-    console.log(data);
+    // console.log();
     const backdrop_path = data?.backdrop_path && request.imagePath + data?.backdrop_path;
     return (
         <>
@@ -34,7 +35,7 @@ const MovieDetails = (props) => {
                     <div className="col">
                         <h1 className="movie-details__title pt-5">{data.original_title} ({data.release_date?.substring(0, 4)})</h1>
 
-                        <p className="movie-details__sub-title mb-2">
+                        <p className="movie-details__sub-title mb-1">
                             <span className="certification">R</span> &nbsp;|&nbsp;&nbsp;
                             <span className="release">{data.release_date}</span> &nbsp;|&nbsp;&nbsp;
                             <span className="genres">{
@@ -44,16 +45,26 @@ const MovieDetails = (props) => {
                             <span className="runtime">{data.runtime} mins</span>
                         </p>
 
-                        <div className="movie-details__rating">
+                        <div className="movie-details__rating mb-3">
                             <img src="./imgs/imdb_logo.svg" alt="" />
-                            <h2 className="movie-details__imdb-rating pl-2">{omdbData.imdbRating}<span className="star  pl-1">&#9733;</span></h2>
+                            <h3 className="movie-details__imdb-rating pl-2">{omdbData.imdbRating}<span className="star  ">&#9733;</span></h3>
                         </div>
 
-                        <h3 className="mt-5 mb-1 ">Synopsis</h3>
+                        <div className="movie-details__buttons">
+                            <div style={{ display: 'flex', alignItems: 'center', }}>
+                                <RadialProgressBar percent={data?.vote_average} />
+                            <h4 className="pl-1">User <span><br/></span> Score</h4>
+                            </div>
+                            <button className="btn-floating">&#9658;</button>
+                            <button className="btn-floating">❤</button>
+                            <button className="btn-floating">&#9873;</button>
+                        </div>
+
+                        <h3 className="mt-4 mb-1 ">Synopsis</h3>
 
                         <p className="movie-details__overview">{data.overview}</p>
 
-                        <div className="row mt-4">
+                        <div className="row mt-3">
                             <div className="col">
                                 <h3 >{omdbData.Director}</h3>
                                 <label htmlFor="">Director</label>
@@ -72,9 +83,10 @@ const MovieDetails = (props) => {
 
 
 
-                <Cast />
+                <Cast movie_id={id} />
 
 
+                    
 
             </div>}
         </>

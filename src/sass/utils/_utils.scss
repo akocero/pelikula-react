@@ -3,35 +3,7 @@
     margin: 0 auto;
 }
 
-.btn {
-    display: inline-block;
-    padding: 1rem 2rem;
-    outline: none;
-    border: none;
-    background-color: $light-red;
-    border-radius: 0.5rem;
-    color: $light;
-    font-size: 1.5rem;
-    cursor: pointer;
-    letter-spacing: 1px;
-    
-    &-sm {
-        margin-top: 2rem;
-        padding: 1rem 2rem;
-        outline: none;
-        border: none;
-        color: white;
-        font-size: 1.4rem;
-        cursor: pointer;
-        letter-spacing: 2px;    
-        border-radius: 3rem;
-    }
 
-    &-blue {
-        background-color: $blue;
-    }
-    
-}
 
 .d-flex {
     display: flex;

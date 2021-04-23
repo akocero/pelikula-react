@@ -34,35 +34,35 @@ const Discover = ({ title, fetchURL, poster }) => {
                         <img onClick={() => handleClick(movie.id)} className={poster ? 'discover-poster poster' : 'discover-poster poster'} key={movie.id} src={poster ? imagePath + movie.poster_path : imagePath + movie.poster_path} alt={movie.id} />
                     )}
                 </div>
-                { movie && 
-                <div className={`discover-details ${showDiscoverDetails ? 'show' : ''}`} 
-                    style={{
-                        backgroundSize: "cover",
-                        backgroundImage: `url(${imagePath + movie?.backdrop_path})`,
-                        backgroundPosition: "top center",
-                    }}>
-                    
-                    <button href="#" className="discover-details__close-button" onClick={(e) => closeDiscover(e) }>&#10006;</button>
-                    <h1 className="mb-2">{movie?.original_title} ({movie.release_date?.substring(0, 4)})</h1>
-                    
-                    <div className="discover-details__content">
-                        <div className="user-score">
-                            <RadialProgressBar percent={movie?.vote_average} />
-                            <h4 className="mt-1">User Score</h4>
+                {movie &&
+                    <div className={`discover-details ${showDiscoverDetails ? 'show' : ''}`}
+                        style={{
+                            backgroundSize: "cover",
+                            backgroundImage: `url(${imagePath + movie?.backdrop_path})`,
+                            backgroundPosition: "top center",
+                        }}>
+
+                        <button href="#" className="discover-details__close-button" onClick={(e) => closeDiscover(e)}>&#10005;</button>
+                        <h1 className="mb-2">{movie?.original_title} ({movie.release_date?.substring(0, 4)})</h1>
+
+                        <div className="discover-details__content">
+                            <div className="user-score">
+                                <RadialProgressBar percent={movie?.vote_average} />
+                                <h4 className="mt-1">User Score</h4>
+                            </div>
+
+                            <div className="pl-2">
+                                <h3 className="mb-1">Synopsis</h3>
+                                <p className="mb-2">{movie?.overview}</p>
+                                <Link className="btn-link" to={'/' + movie?.id}>View more &#8599;</Link>
+                            </div>
+
                         </div>
-                        
-                        <div className="pl-2">
-                            <h3 className="mb-1">Synopsis</h3>
-                            <p className="mb-2">{movie?.overview}</p>
-                            <Link className="btn-link" to={'/' + movie?.id}>View more</Link>
-                        </div>
-                        
+
                     </div>
-                    
-                </div>
                 }
             </div>
-            
+
         </>
     );
 }

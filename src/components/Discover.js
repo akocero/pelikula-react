@@ -31,7 +31,7 @@ const Discover = ({ title, fetchURL, poster }) => {
                 <div className="discover-posters">
                     {isLoading && <div> Loading... </div>}
                     {movies?.map(movie =>
-                        <img onClick={() => handleClick(movie.id)} className={poster ? 'discover-poster poster' : 'discover-poster'} key={movie.id} src={poster ? imagePath + movie.poster_path : imagePath + movie.backdrop_path} alt={movie.id} />
+                        <img onClick={() => handleClick(movie.id)} className={poster ? 'discover-poster poster' : 'discover-poster poster'} key={movie.id} src={poster ? imagePath + movie.poster_path : imagePath + movie.poster_path} alt={movie.id} />
                     )}
                 </div>
                 { movie && 
@@ -53,8 +53,8 @@ const Discover = ({ title, fetchURL, poster }) => {
                         
                         <div className="pl-2">
                             <h3 className="mb-1">Synopsis</h3>
-                            <p className="mb-1">{movie?.overview}</p>
-                            <Link className="card__content--title" to={'/' + movie?.id}>View more</Link>
+                            <p className="mb-2">{movie?.overview}</p>
+                            <Link className="btn-link" to={'/' + movie?.id}>View more</Link>
                         </div>
                         
                     </div>

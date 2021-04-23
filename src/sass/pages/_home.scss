@@ -103,6 +103,7 @@
 
             /* Handle */
         &::-webkit-scrollbar-thumb {
+            border-radius: 6px;
             background: rgba(#555, 0.1);
         }
 

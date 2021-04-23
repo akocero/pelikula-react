@@ -14,7 +14,7 @@ const Cast = ({movie_id}) => {
             <div className="cast-list">
                 { isLoading && <div>Loading...</div> }
                 {data && data.cast.map((person, i) => i < 9 && <Card key={person.id} person={person} />)}
-                <a href="">View all</a>
+                {/* <a href="">View all</a> */}
             </div>
         </div>
     );

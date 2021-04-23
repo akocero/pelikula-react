@@ -25,6 +25,8 @@
     &-blue {
         background-color: $blue;
     }
+
+    
 }
 
 .btn-floating {
@@ -50,5 +52,16 @@
 
     &:active {
         transform: translateY(0);
+    }
+}
+
+
+.btn-link {
+    color: #E22D2C;
+    // text-decoration: none;
+    text-shadow: black 1px 0 10px;
+
+    &:hover {
+        text-decoration: none;
     }
 }

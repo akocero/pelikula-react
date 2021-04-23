@@ -67,4 +67,13 @@
         height: calc(100vh);
         padding-top: 6rem;
     }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        
+        & > * {
+            margin-right: 3.4rem;
+        }
+    }
 }

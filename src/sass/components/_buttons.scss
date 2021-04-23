@@ -1,0 +1,54 @@
+.btn {
+    padding: 1rem 2rem;
+    display: inline-block;
+    outline: none;
+    border: none;
+    background-color: $light-red;
+    border-radius: 6px;
+    color: $light;
+    font-size: 1.5rem;
+    cursor: pointer;
+    letter-spacing: 1px;
+    
+    &-sm {
+        margin-top: 2rem;
+        padding: 1rem 2rem;
+        outline: none;
+        border: none;
+        color: white;
+        font-size: 1.4rem;
+        cursor: pointer;
+        letter-spacing: 2px;    
+        border-radius: 3rem;
+    }
+
+    &-blue {
+        background-color: $blue;
+    }
+}
+
+.btn-floating {
+    background-color: #E22D2C;
+    height: 4.8rem;
+    width: 4.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.144);
+    transition: all 0.2s ease;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.144);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+}

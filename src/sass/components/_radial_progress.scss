@@ -1,0 +1,60 @@
+.percent, svg, circle {
+    position: relative;
+  width: 56px;
+  height: 56px;
+}
+
+svg {
+    transform: rotate(-90deg);
+}
+
+circle {
+  position: absolute;
+  fill: none;
+  stroke-width: 4;
+  transform: translate(4px, 4px);
+  stroke-dasharray: 148;
+  stroke-linecap: round;
+}
+
+circle:nth-child(1) {
+  stroke-dashoffset: 0;
+  stroke: #424242;
+}
+
+.percent circle:nth-child(2) {
+//   stroke-dashoffset: calc(148 - (148 * 75) / 100);
+  stroke: gold;
+  animation: percent 1.5s linear;
+  animation-delay: 1s;
+}
+
+
+.number {
+  position: absolute;
+  top: 14px;
+  right: 10px;
+  color: #fff;
+  
+}
+
+.number h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.number span {
+  font-size: 8px;
+  opacity: .7;
+}
+
+.percent span {
+  color: gold;
+}
+
+@keyframes percent {
+  0% {
+    stroke-dashoffset: 0;
+    stroke-width: 0;
+  }
+}

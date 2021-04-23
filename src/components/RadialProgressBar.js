@@ -1,5 +1,6 @@
-const RadialProgressBar = ({percent}) => {
-    const validPercent = percent?.toString().replace('.', '');
+const RadialProgressBar = ({ percent }) => {
+    const validPercent = percent?.toString().length <= 1 ? percent.toString() + '0' : percent?.toString().replace('.', '');
+    // console.log(validPercent);
     return (
         <div className="percent">
             <svg>
@@ -14,5 +15,5 @@ const RadialProgressBar = ({percent}) => {
         </div>
     );
 }
- 
+
 export default RadialProgressBar;

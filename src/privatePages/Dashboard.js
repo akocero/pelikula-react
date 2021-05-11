@@ -22,29 +22,31 @@ const Dashboard = () => {
     return (
         <div className="dashboard">
             <section className="welcome container">
-                <h3>Wlcome John Doe!</h3>
-                <br/>
+                <h3>Wlcome {currentUser && currentUser.email}</h3>
+                <br />
                 <h4>Announcement!</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit nobis suscipit velit iste numquam eaque cupiditate nam cum. Eveniet, voluptatum?</p>
+                <button onClick={logoutHandler}>Log out</button>
+                {error && <div>{error}</div>}
             </section>
             {/* <div>Dashboard</div>
-            {error && <div>{error}</div>}
-            <h3>{currentUser && currentUser.email}</h3>
-            <button onClick={logoutHandler}>Log out</button> */}
+            
+            <h3></h3>
+             */}
 
             <section className="forum-categories">
                 <ul className="category">
                     <li className="category__item">
-                        <a href="" className="category__link category__link--active">Trending</a>
+                        <a href="/" className="category__link category__link--active">Trending</a>
                     </li>
                     <li className="category__item">
-                        <a href="" className="category__link">Upcomming</a>
-                        </li>
-                    <li className="category__item">
-                        <a href="" className="category__link">Best Movies</a>     
+                        <a href="/" className="category__link">Upcomming</a>
                     </li>
                     <li className="category__item">
-                        <a href="" className="category__link">Local Movies</a>
+                        <a href="/" className="category__link">Best Movies</a>
+                    </li>
+                    <li className="category__item">
+                        <a href="/" className="category__link">Local Movies</a>
                     </li>
                 </ul>
             </section>
@@ -66,7 +68,7 @@ const Dashboard = () => {
                 <h4 className="room__name">Room 3</h4>
                 <p className="room__participants">Participants - 15</p>
             </div>
-            
+
         </div>
     )
 }

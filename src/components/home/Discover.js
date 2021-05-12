@@ -1,5 +1,5 @@
-import useData from '../hooks/useData';
-import RadialProgressBar from '../components/RadialProgressBar'
+import useData from '../../hooks/useData';
+import RadialProgressBar from '../RadialProgressBar'
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 

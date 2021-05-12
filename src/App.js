@@ -12,6 +12,7 @@ import Signup from './pages/Signup';
 // privatePages
 import Dashboard from './privatePages/Dashboard';
 import PrivateRoute from './privatePages/PrivateRoute';
+import Header from './components/layout/Header';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <div className="App">
         <AuthContextProvider>
           <MovieContextProvider>
+            <Header />
             <Switch>
               <Route exact path='/' component={Home} />
 

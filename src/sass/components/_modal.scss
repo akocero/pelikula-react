@@ -1,0 +1,36 @@
+.modal {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.795);
+    z-index: 99999;
+    // padding: 20rem;
+    .video_wrapper {
+        position: relative;
+        padding: 18% 32%;
+        // height: 60vh;
+        // width: auto;
+        
+        iframe{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    }
+
+    &__btn-close {
+        position: absolute;
+        top: 12%;
+        right: 12%;
+        font-size: 3rem;
+        cursor: pointer;
+    }
+}

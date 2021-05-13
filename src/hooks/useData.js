@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const useData = (url, random = false, single = false) => {
+const useData = (url) => {
 
     const [data, setData] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
@@ -12,21 +12,10 @@ const useData = (url, random = false, single = false) => {
 
         axios(url, { signal: abortCont.signal })
             .then(response => {
-                console.log(response.data);
 
-                if(random){
-                   setData(response.data.results[Math.floor(Math.random() * response.data.results.length - 1)]); 
-                }
-
-                if(single) {
-                    setData(response.data);
-                }
-
-                if(!single && !random){
-                    setData(response.data.results);
-                }
-
+                setData(response.data);
                 setIsLoading(false);
+
             }).catch(err => {
                 if (err.name === 'AbortError') {
                     console.log('Fetch Aborted');
@@ -36,7 +25,7 @@ const useData = (url, random = false, single = false) => {
 
         return () => abortCont.abort();
 
-    }, [url, random, single]);
+    }, [url]);
 
 
     return { data, isLoading };

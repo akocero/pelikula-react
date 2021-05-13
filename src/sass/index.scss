@@ -4,6 +4,7 @@
 @import 'base/typography';
 
 @import 'components/card';
+@import 'components/modal';
 @import 'components/forms'; 
 @import 'components/loading'; 
 @import 'components/radial_progress'; 
@@ -15,6 +16,7 @@
 @import 'utils/utils';
 
 @import 'pages/home';
+@import 'pages/browse_movies';
 @import 'pages/movie_details';
 @import 'pages/dashboard';
 @import 'pages/auth';

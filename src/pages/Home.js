@@ -1,19 +1,17 @@
-import Discover from '../components/Discover';
+import Discover from '../components/home/Discover';
 import request from '../url/request';
-import Header from '../components/layout/Header';
-import Heading from '../components/Heading';
+import Heading from '../components/home/Heading';
 import useData from '../hooks/useData';
 import Loading from '../components/Loading'
 
 const HomePage = () => {
 
-    const { data: movie, isLoading } = useData(request.topAction, true);
+    const { data: movie, isLoading } = useData(request.topRated);
     return (
-        
-        <div className="home_page">
-            <Header />
+
+        <div className="home">
             {isLoading && <Loading />}
-            {movie && <Heading movie={movie} />}
+            {movie && <Heading movie={movie.results[Math.floor(Math.random() * movie.results.length - 1)]} />}
             <Discover title="Trending Now" fetchURL={request.trending} poster={true} />
             <Discover title="Top Action" fetchURL={request.topAction} poster={false} />
             <Discover title="Popular Movies" fetchURL={request.topPopular} poster={false} />

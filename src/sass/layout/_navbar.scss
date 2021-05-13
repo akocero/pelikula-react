@@ -1,13 +1,15 @@
 .navbar {
     position: fixed;
-    padding: 2rem 5rem;
+    padding: 0 5rem;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     color: white;
-    font-weight: 500;
+    // font-weight: 500;
     width: 100%;
     transition: all .2s ease;
     z-index: 1000;
+    height: 7rem;
     .text-logo {
         font-size: 2.2rem;
         letter-spacing: 2px;
@@ -29,6 +31,6 @@
     }
 
     &.has-bg {
-        background-color: rgba(20, 20, 20, 0.952);
+        background-color: rgba($dark, 0.952);
     }
 }

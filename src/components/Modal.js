@@ -18,9 +18,7 @@ const Modal = () => {
         <div className="modal">
             <div onClick={() => toggleModal()} className="modal__btn-close">&#10005;</div>
             <div className="video_wrapper">
-                {trailer?.results?.length === 0 ? 'No Trailer Available' : <iframe width="100%" height="100%" src={request.youtube + trailer?.results[0].key} title="youtube-trailer"></iframe>}
-                {/* {!isLoading && data?.results[0].key && } */}
-
+                {trailer?.results?.length === 0 && isLoading ? 'No Trailer Available' : <iframe width="100%" height="100%" src={request.youtube + trailer?.results[0].key} title="youtube-trailer"></iframe>}
             </div>
         </div>
         ;

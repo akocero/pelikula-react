@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Header from '../components/layout/Header';
 import useOMDB from '../hooks/useOMDB';
 import useData from '../hooks/useData';
 import request from '../url/request';
@@ -12,8 +11,7 @@ const MovieDetails = (props) => {
     const [id] = useState(props.match.params.post_id);
     const { data, isLoading } = useData(`https://api.themoviedb.org/3/movie/${id}?api_key=${request.apikey}&language=en-US`, false, true);
 
-    const { data: omdbData, isLoading: isOmdbLoading } = useOMDB(`http://www.omdbapi.com/?i=${data?.imdb_id}&plot=full&apikey=2ff9984a`);
-
+    const { data: omdbData } = useOMDB(`http://www.omdbapi.com/?i=${data?.imdb_id}&plot=full&apikey=2ff9984a`);
     // console.log();
     const backdrop_path = data?.backdrop_path && request.imagePath + data?.backdrop_path;
     return (
@@ -47,7 +45,7 @@ const MovieDetails = (props) => {
 
                         <div className="movie-details__rating mb-3">
                             <img src="./imgs/imdb_logo.svg" alt="" />
-                            <h3 className="movie-details__imdb-rating pl-2">{omdbData.imdbRating}<span className="star  ">&#9733;</span></h3>
+                            <h3 className="movie-details__imdb-rating pl-2">{omdbData?.imdbRating}<span className="star  ">&#9733;</span></h3>
                         </div>
 
                         <div className="movie-details__buttons">
@@ -66,7 +64,7 @@ const MovieDetails = (props) => {
 
                         <div className="row mt-3">
                             <div className="col">
-                                <h3 >{omdbData.Director}</h3>
+                                <h3 >{omdbData?.Director}</h3>
                                 <label htmlFor="">Director</label>
                             </div>
                             <div className="col">

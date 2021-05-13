@@ -21,7 +21,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   box-sizing: inherit;
   color: #eee;
-  background-color: #252525;
+  background-color: #030303;
 }
 
 ul {
@@ -182,7 +182,7 @@ input[type=password] {
   padding: 1rem;
   display: inline-block;
   width: 100%;
-  background-color: #222222;
+  background-color: black;
   color: #eee;
   border: none;
   border-bottom: 2px solid transparent;
@@ -354,14 +354,15 @@ circle:nth-child(1) {
 
 .navbar {
   position: fixed;
-  padding: 2rem 5rem;
+  padding: 0 5rem;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   color: white;
-  font-weight: 500;
   width: 100%;
   transition: all .2s ease;
   z-index: 1000;
+  height: 7rem;
 }
 
 .navbar .text-logo {
@@ -385,7 +386,7 @@ circle:nth-child(1) {
 }
 
 .navbar.has-bg {
-  background-color: rgba(20, 20, 20, 0.952);
+  background-color: rgba(3, 3, 3, 0.952);
 }
 
 .row-movie-cards {
@@ -706,7 +707,7 @@ circle:nth-child(1) {
 }
 
 .bg-dark {
-  background-color: #161616;
+  background-color: black;
 }
 
 .text-center {
@@ -723,10 +724,6 @@ circle:nth-child(1) {
 
 .star {
   color: #D2B733;
-}
-
-.home {
-  background-color: #060606;
 }
 
 .header {
@@ -756,7 +753,7 @@ circle:nth-child(1) {
   position: relative;
   margin-top: -7rem;
   height: 12rem;
-  background-image: linear-gradient(180deg, transparent, black, #060606);
+  background-image: linear-gradient(180deg, transparent, black, #030303);
   z-index: 100;
 }
 
@@ -913,10 +910,6 @@ circle:nth-child(1) {
 
 .browse-movies__search {
   padding: 8rem 0 0 0;
-}
-
-.movie-details {
-  background-color: #030303;
 }
 
 .movie-details .row {

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
 
-const Header = () => {
+const Navbar = () => {
     const [hasBG, setHasBG] = useState(false);
     useEffect(() => {
         const sc = window.addEventListener("scroll", () => {
@@ -21,7 +21,7 @@ const Header = () => {
             <nav className="nav">
                 <ul className="nav-links">
                     <li className="nav-item"><NavLink to="/search" className="nav-link">Browse Movies</NavLink></li>
-                    <li className="nav-item"><NavLink to="/login" href="" className="nav-link">Log in</NavLink></li>
+                    <li className="nav-item"><NavLink to="/login" href="" className="nav-link">Log in/Sign up</NavLink></li>
 
                 </ul>
 
@@ -30,4 +30,4 @@ const Header = () => {
     );
 }
 
-export default Header;
+export default Navbar;

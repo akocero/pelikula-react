@@ -14,7 +14,8 @@ import Signup from './pages/Signup';
 // privatePages
 import Dashboard from './privatePages/Dashboard';
 import PrivateRoute from './privatePages/PrivateRoute';
-import Header from './components/layout/Header';
+import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
 
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
           <MovieContextProvider>
             <ModalContextProvider>
               <Modal />
-              <Header />
+              <Navbar />
               <Switch>
                 <Route exact path='/' component={Home} />
 
@@ -36,6 +37,7 @@ function App() {
                 <Route path='/:post_id' component={MovieDetails} />
 
               </Switch>
+              <Footer />
             </ModalContextProvider>
           </MovieContextProvider>
         </AuthContextProvider>

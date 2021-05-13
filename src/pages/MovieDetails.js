@@ -4,6 +4,7 @@ import useOMDB from '../hooks/useOMDB';
 import useData from '../hooks/useData';
 import request from '../url/request';
 import Loading from '../components/Loading';
+import ButtonPlayYT from '../components/ButtonPlayYT';
 import Cast from '../components/Cast';
 import RadialProgressBar from '../components/RadialProgressBar';
 
@@ -17,7 +18,6 @@ const MovieDetails = (props) => {
     const backdrop_path = data?.backdrop_path && request.imagePath + data?.backdrop_path;
     return (
         <>
-            <Header />
             { isLoading && <Loading />}
             { data && <div className="movie-details" >
 
@@ -53,9 +53,9 @@ const MovieDetails = (props) => {
                         <div className="movie-details__buttons">
                             <div style={{ display: 'flex', alignItems: 'center', }}>
                                 <RadialProgressBar percent={data?.vote_average} />
-                            <h4 className="pl-1">User <span><br/></span> Score</h4>
+                                <h4 className="pl-1">User <span><br /></span> Score</h4>
                             </div>
-                            <button className="btn-floating">&#9658;</button>
+                            <ButtonPlayYT movieID={data.id} />
                             <button className="btn-floating">❤</button>
                             <button className="btn-floating">&#9873;</button>
                         </div>
@@ -86,7 +86,7 @@ const MovieDetails = (props) => {
                 <Cast movie_id={id} />
 
 
-                    
+
 
             </div>}
         </>

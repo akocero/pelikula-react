@@ -12,7 +12,7 @@ const Discover = ({ title, fetchURL, poster }) => {
     console.log(movies);
 
     const handleClick = (id) => {
-        const movie = movies.find(movie => movie.id === id);
+        const movie = movies.results.find(movie => movie.id === id);
         setShowDiscoverDetails(true);
         console.log('eto', movie);
         setMovie(movie);
@@ -30,7 +30,7 @@ const Discover = ({ title, fetchURL, poster }) => {
                 </h2>
                 <div className="discover-posters">
                     {isLoading && <div> Loading... </div>}
-                    {movies?.map(movie =>
+                    {movies?.results.map(movie =>
                         <img onClick={() => handleClick(movie.id)} className={poster ? 'discover-poster poster' : 'discover-poster poster'} key={movie.id} src={poster ? imagePath + movie.poster_path : imagePath + movie.poster_path} alt={movie.id} />
                     )}
                 </div>

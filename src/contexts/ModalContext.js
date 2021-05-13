@@ -33,8 +33,6 @@ const ModalContextProvider = (props) => {
                 `https://api.themoviedb.org/3/movie/${movieID}/videos?api_key=${request.apikey}&language=en-US`,
                 { signal: abortCont.signal }
             );
-
-            console.log('Modal Context', result.data);
             // console.log(result.data);
 
             setTrailer(result.data);

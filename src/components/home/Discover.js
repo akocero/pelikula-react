@@ -9,7 +9,6 @@ const Discover = ({ title, fetchURL, poster }) => {
     const { data: movies, isLoading } = useData(fetchURL);
     const [showDiscoverDetails, setShowDiscoverDetails] = useState(false)
     const [movie, setMovie] = useState(null);
-    console.log(movies);
 
     const handleClick = (id) => {
         const movie = movies.results.find(movie => movie.id === id);

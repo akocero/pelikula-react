@@ -8,7 +8,7 @@ const Heading = ({ movie }) => {
     }
 
     const backdrop_path = movie?.backdrop_path && imagePath + movie?.backdrop_path;
-    console.log('eto', movie)
+
     return (
         <div className="header"
             style={{

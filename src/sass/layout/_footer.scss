@@ -1,0 +1,9 @@
+.footer {
+    padding: 2rem 9rem;
+    text-align: center;
+
+    &__issue {
+        border-bottom: 1px dashed rgb(49, 49, 49);
+        padding: 1rem;
+    }
+}

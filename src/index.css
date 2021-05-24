@@ -389,6 +389,16 @@ circle:nth-child(1) {
   background-color: rgba(3, 3, 3, 0.952);
 }
 
+.footer {
+  padding: 2rem 9rem;
+  text-align: center;
+}
+
+.footer__issue {
+  border-bottom: 1px dashed #313131;
+  padding: 1rem;
+}
+
 .row-movie-cards {
   margin-top: 1rem;
   display: grid;
